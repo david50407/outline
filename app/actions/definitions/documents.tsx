@@ -215,7 +215,7 @@ export const publishDocument = createAction({
     }
     const document = stores.documents.get(activeDocumentId);
     return (
-      !!document?.isDraft && stores.policies.abilities(activeDocumentId).update
+      !!document?.isDraft && stores.policies.abilities(activeDocumentId).publish
     );
   },
   perform: async ({ activeDocumentId, stores, t }) => {
