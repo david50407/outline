@@ -44,6 +44,7 @@ async function presentDocument(
     collectionId: undefined,
     parentDocumentId: undefined,
     lastViewedAt: undefined,
+    isCollectionDeleted: await document.isCollectionDeleted(),
   };
 
   if (!!document.views && document.views.length > 0) {
