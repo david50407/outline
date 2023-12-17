@@ -127,6 +127,7 @@ export type UserEvent = BaseEvent &
 
 export type DocumentEvent = BaseEvent &
   (
+    | DocumentUserEvent
     | {
         name:
           | "documents.create"
@@ -208,6 +209,12 @@ export type CollectionGroupEvent = BaseEvent & {
   data: {
     name: string;
   };
+};
+
+export type DocumentUserEvent = BaseEvent & {
+  name: "documents.add_user" | "documents.remove_user";
+  userId: string;
+  documentId: string;
 };
 
 export type CollectionEvent = BaseEvent &

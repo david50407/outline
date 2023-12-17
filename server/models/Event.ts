@@ -137,6 +137,8 @@ class Event extends IdModel {
     "documents.delete",
     "documents.permanent_delete",
     "documents.restore",
+    "documents.add_user",
+    "documents.remove_user",
     "revisions.create",
     "users.create",
   ];
@@ -163,6 +165,8 @@ class Event extends IdModel {
     "documents.delete",
     "documents.permanent_delete",
     "documents.restore",
+    "documents.add_user",
+    "documents.remove_user",
     "groups.create",
     "groups.update",
     "groups.delete",
